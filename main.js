@@ -19,7 +19,7 @@ function buttonClickGET() {
 
     var ville = document.getElementById("ville").value;
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ville}&units=metric&lang=en&appid=6e618f1604cf0428e080ea424422e401
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ville}&units=metric&lang=en&appid=6e618f1604cf0428e080ea424422e401
 `, myInit).then(
 function(response) {
     return response.json();
