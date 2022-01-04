@@ -19,7 +19,7 @@ function buttonClickGET() {
 
     var ville = document.getElementById("ville").value;
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ville}&units=metric&lang=en&appid=6e618f1604cf0428e080ea424422e401
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ville}&units=metric&lang=en&appid=6e618f1604cf0428e080ea424422e401
 `, myInit).then(
 function(response) {
     return response.json();
@@ -33,7 +33,7 @@ function(response) {
     console.log(myJson.weather[0].description);
     console.log(myJson.weather[0].icon);
     var icon = myJson.weather[0].icon
-    console.log(`http://openweathermap.org/img/wn/${icon}.png`)
+    console.log(`https://openweathermap.org/img/wn/${icon}.png`)
 
     // add infos to html
     
@@ -82,7 +82,7 @@ function(response) {
     right.appendChild(temp);
 
     var iconIcon = document.createElement('p');
-    iconIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" alt="">`
+    iconIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}.png" alt="">`
     right.appendChild(iconIcon);
 
     
