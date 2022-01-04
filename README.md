@@ -1,4 +1,4 @@
 # weather
 
-sort out sunset/sunset time
+sort out sunrise/sunset time
 do responsive
