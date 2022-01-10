@@ -191,4 +191,21 @@ p {
 
     }
 
+    .weathaResult h2{
+        text-align: center;
+    }
+
+    .result {
+        flex-direction: column;
+    }
+
+    .right {
+        order: 1;
+        text-align: center;
+    }
+
+    .left {
+        order: 2;
+    }
+
 }
