@@ -163,3 +163,32 @@ p {
 .left p {
     margin-top: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ville {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    #search {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .weatha, .weathaResult {
+        width: 50vw;
+        max-width: 50vw;
+        margin-top: 5vh;
+
+    }
+
+}
