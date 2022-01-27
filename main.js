@@ -97,21 +97,16 @@ function(response) {
 
 
 
-// fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ville}&units=metric&lang=fr&appid=6e618f1604cf0428e080ea424422e401
-// `, myInit).then(
-// function(response) {
-//     return response.json();
-//     // console.log(response);
-// }
-// ).then(function(myJson) {
-//     console.log(myJson.name);
-//     console.log(myJson.main.temp);
-//     console.log(myJson.main.humidity);
-//     console.log(myJson.coord);
-//     console.log(myJson.coord);
-//     console.log(myJson.coord);
-//     console.log(myJson.weather[0].description);
-//     console.log(myJson.weather[0].icon);
-//     var icon = myJson.weather[0].icon
-//     console.log(`http://openweathermap.org/img/wn/${icon}.png`)
-// })
+// Get the input field
+var input = document.getElementById("ville");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.key === 'Enter') {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("search").click();
+  }
+});
