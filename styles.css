@@ -31,6 +31,7 @@ h2 {
     animation: appear 0.7s;
 }
 
+
 p {
     font-weight: 300;
 }
@@ -202,12 +203,21 @@ p {
     .right {
         order: 1;
         text-align: center;
+        margin-bottom: 30px;
     }
 
     .left {
         order: 2;
     }
 
+    h2 span {
+        font-size: 13px;
+        white-space:nowrap;
+
+    }
+    h2 {
+        margin-bottom: 30px;
+    }
 }
 
 /* hello */
