@@ -1,4 +1,4 @@
 # weather
 
-sort out sunrise/sunset time
-do responsive
+Finish responsive
+Live clock
