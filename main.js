@@ -57,23 +57,22 @@ function buttonClickGET() {
       let showDate = document.createElement('p')
       let showTime = document.createElement('p')
       showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate)
-
+      
       function refreshTime() {
         showTime.innerHTML = new Intl.DateTimeFormat('en-GB', timeOptions).format(wheathaNewDate);
+        setTimeout(refreshTime, 1000);
       }
-      setInterval(refreshTime, 1000);
+      refreshTime()
       
-        refreshTime()
-        console.log(refreshTime())
       
-
+      
       
       
       affichageParent.appendChild(villeName)
       affichageParent.appendChild(showDate)
       affichageParent.appendChild(showTime)
       affichageParent.appendChild(affichage)
-
+      
       
       // left div
       let left = document.createElement('div')
@@ -125,9 +124,7 @@ function buttonClickGET() {
       let desc = document.createElement('p');
       desc.innerHTML = `${myJson.weather[0].description}`
       right.appendChild(desc);
-      
     })
-    
   }
   
   
