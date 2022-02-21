@@ -1,4 +1,3 @@
 # weather
 
-Finish responsive
-Live clock
+https://mta-gh.github.io/weather/
