@@ -40,7 +40,7 @@ function buttonClickGET() {
       document.querySelector('main').appendChild(affichageParent)
       // let weather = document.querySelector(".weathaResultTitle")
       let villeName = document.createElement('h2');
-      villeName.innerHTML = `${myJson.name} (${myJson.coord.lon} / ${myJson.coord.lat} ) : `
+      villeName.innerHTML = `${myJson.name} <span>(${myJson.coord.lon} / ${myJson.coord.lat})</span> : `
       
       // the date and time
       let localDate = new Date();
@@ -57,12 +57,23 @@ function buttonClickGET() {
       let showDate = document.createElement('p')
       let showTime = document.createElement('p')
       showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate)
-      
+
       function refreshTime() {
-        showTime.innerHTML = new Intl.DateTimeFormat('en-GB', timeOptions).format(wheathaNewDate);
-        setTimeout(refreshTime, 1000);
+        let localDateTwo = new Date();
+        let localTimeTwo = localDateTwo.getTime();
+        let localOffsetTwo = localDateTwo.getTimezoneOffset() * 60000;
+        let utcTwo = localTimeTwo + localOffsetTwo
+        let wheathaTimeTwo = utcTwo + (1000*myJson.timezone);
+        let wheathaNewDateTwo = new Date(wheathaTimeTwo);
+        let timeOptionsTwo = {hour: 'numeric', minute: 'numeric', second: 'numeric'};
+
+        showTime.innerHTML = new Intl.DateTimeFormat('en-GB', timeOptionsTwo).format(wheathaNewDateTwo)
       }
-      refreshTime()
+      setInterval(
+        function() {refreshTime()}
+      , 1000);
+
+
       
       
       
