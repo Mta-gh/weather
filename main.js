@@ -40,7 +40,7 @@ function buttonClickGET() {
       document.querySelector('main').appendChild(affichageParent)
       // let weather = document.querySelector(".weathaResultTitle")
       let villeName = document.createElement('h2');
-      villeName.innerHTML = `${myJson.name} <span>(${myJson.coord.lon} / ${myJson.coord.lat})</span> : `
+      villeName.innerHTML = `${myJson.name} <span>(${myJson.coord.lon} / ${myJson.coord.lat})</span>`
       
       // the date and time
       let localDate = new Date();
