@@ -26,7 +26,7 @@ h2 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     padding: 0;
-    margin: 0 0 50px 0;
+    margin: 0 0 15px 0;
     text-shadow: 0px 0px 10px white;
     animation: appear 0.7s;
 }
@@ -62,6 +62,14 @@ p {
 .weathaResult p {
     animation-duration: 2s;
     animation-name:appear;
+}
+.weathaResult>p:nth-of-type(1) {
+    margin-bottom: 0;
+}
+
+.weathaResult>p:nth-of-type(2) {
+    text-shadow: 0 0 3px white;
+
 }
 
 @keyframes appear {
