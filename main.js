@@ -55,7 +55,26 @@ function buttonClickGET() {
       console.log(new Intl.DateTimeFormat('en-GB', timeOptions).format(wheathaNewDate));
       let showDate = document.createElement('p')
       let showTime = document.createElement('p')
-      showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate)
+
+      var mql = window.matchMedia("screen and (min-width: 768px)")
+      const mediaQueryList = window.matchMedia(mql);
+      
+      function respoDate() {
+
+        if (mql.matches) { // If media query matches
+          showDate.innerHTML = localDate.getDate() + "-" + (localDate.getMonth() + 1) + "-" + localDate.getFullYear();
+        } else {
+          showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate);
+        }
+      }
+      
+      console.log(respoDate())
+      respoDate()
+
+      mediaQueryList.addEventListener("change", respoDate())
+
+      
+      
       
       function refreshTime() {
         // Find better way
