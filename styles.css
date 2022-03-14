@@ -51,7 +51,7 @@ p {
     background: #fcc7de38;
     box-shadow:  15px 15px 39px #deb0c491,
     -15px -15px 39px #ffe4fe;
-    
+    text-align: center;
 }
 
 .weathaResult {
@@ -140,15 +140,6 @@ p {
     box-shadow: none;
 }
 
-/* #ville {
-    background: linear-gradient(145deg, #e6b6cb, #ffd8f1);
-}
-
-#search {
-    background: linear-gradient(145deg, #ffd8f1, #e6b6cb);
-
-} */
-
 .result {
     width: 90%;
     max-width: 90%;
@@ -176,6 +167,11 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+
+    body {
+        font-size:  17px;
+    }
+    
     .inputs {
         flex-direction: column;
         align-items: center;
@@ -220,7 +216,7 @@ p {
     }
 
     h2 span {
-        font-size: 16px;
+        font-size: 15px;
         white-space:nowrap;
 
     }
@@ -229,7 +225,12 @@ p {
     }
 
     .left p {
-        font-size: 16px;
+        font-size: 17px;
+    }
+
+    .right {
+    font-size: 20px;
+
     }
 }
 

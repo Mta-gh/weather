@@ -63,10 +63,10 @@ function buttonClickGET() {
       function respoDate() {
 
         if (mql.matches) { // If media query matches
-          showDate.innerHTML = localDate.getDate() + "-" + (localDate.getMonth() + 1) + "-" + localDate.getFullYear();
+          showDate.innerHTML = localDate.getDate() + "-" + (localDate.getMonth() + 1) + "-" + localDate.getFullYear() + "<br>-";
           console.log('Media Query Matched!')
         } else {
-          showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate);
+          showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate) + "<br>-";
           console.log('blablas')
 
         }
