@@ -61,6 +61,8 @@ p {
     -15px -15px 39px #ffe4fe;
 }
 
+
+
 .weathaResult p {
     animation-duration: 2s;
     animation-name:appear;
@@ -70,7 +72,8 @@ p {
 }
 
 .weathaResult>p:nth-of-type(2) {
-    text-shadow: 0 0 3px white;
+    text-shadow: 0 0 2px white;
+    margin-top: 0;
 
 }
 

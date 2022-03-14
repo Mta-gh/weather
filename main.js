@@ -63,10 +63,10 @@ function buttonClickGET() {
       function respoDate() {
 
         if (mql.matches) { // If media query matches
-          showDate.innerHTML = localDate.getDate() + "-" + (localDate.getMonth() + 1) + "-" + localDate.getFullYear() + "<br>-";
+          showDate.innerHTML ="-<br>" + localDate.getDate() + "-" + (localDate.getMonth() + 1) + "-" + localDate.getFullYear();
           console.log('Media Query Matched!')
         } else {
-          showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate) + "<br>-";
+          showDate.innerHTML ="-<br>" + new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate);
           console.log('blablas')
 
         }
@@ -89,7 +89,7 @@ function buttonClickGET() {
         let wheathaTimeTwo = utcTwo + (1000*myJson.timezone);
         let wheathaNewDateTwo = new Date(wheathaTimeTwo);
         
-        showTime.innerHTML = new Intl.DateTimeFormat('en-GB', timeOptions).format(wheathaNewDateTwo)
+        showTime.innerHTML = new Intl.DateTimeFormat('en-GB', timeOptions).format(wheathaNewDateTwo) + "<br>-"
       }
       setInterval(
         function() {refreshTime()}
