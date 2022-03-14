@@ -56,24 +56,28 @@ function buttonClickGET() {
       let showDate = document.createElement('p')
       let showTime = document.createElement('p')
 
-      var mql = window.matchMedia("screen and (min-width: 768px)")
+      const mql = window.matchMedia("screen and (max-width: 768px)")
       const mediaQueryList = window.matchMedia(mql);
       
+      // Change date format for responsive
       function respoDate() {
 
         if (mql.matches) { // If media query matches
           showDate.innerHTML = localDate.getDate() + "-" + (localDate.getMonth() + 1) + "-" + localDate.getFullYear();
+          console.log('Media Query Matched!')
         } else {
           showDate.innerHTML = new Intl.DateTimeFormat('en-GB', dateOptions).format(wheathaNewDate);
+          console.log('blablas')
+
         }
       }
       
-      console.log(respoDate())
+      // Initialize function
       respoDate()
 
-      mediaQueryList.addEventListener("change", respoDate())
+      // Listen for window resize
+      mql.addListener(respoDate)
 
-      
       
       
       function refreshTime() {
@@ -169,6 +173,7 @@ function buttonClickGET() {
         
         wind.innerHTML = `Wind<br>-<br>Speed : ${windSpeed} km/h<br>Direction : ${windDir}`
         let sunrise = document.createElement('p');
+
         // Set unix to time format
         let sunriseTime = new Date(myJson.sys.sunrise*1000)
         let riseHours = "0" + sunriseTime.getHours();
