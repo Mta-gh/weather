@@ -1,3 +1,5 @@
+input[type="button"]{ -webkit-appearance: none; }
+
 body {
     display: flex;
     justify-content: flex-start;
@@ -218,7 +220,7 @@ p {
     }
 
     h2 span {
-        font-size: 13px;
+        font-size: 16px;
         white-space:nowrap;
 
     }
